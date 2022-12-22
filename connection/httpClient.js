@@ -1,4 +1,4 @@
-const fetch = require("isomorphic-fetch");
+import fetch from 'isomorphic-fetch';
 
 const client = (config) => {
   const baseUri = `${config.scheme}://${config.host}/v1`
@@ -149,4 +149,5 @@ function addAuthHeaderIfNeeded(request, bearerToken) {
   }
 }
 
+export default client;
 module.exports = client;
